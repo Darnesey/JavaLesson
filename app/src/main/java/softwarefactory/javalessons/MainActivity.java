@@ -20,16 +20,24 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickButton(View v) {
         Button button = (Button) v;
-        ((Button) v).setText("Clicked");
         Start.main();
     }
 
+    public void onClickClear(View v) {
+        out.setText("");
+    }
+
     public static void print(String output){
+        output = out.getText() + output;
         out.setText(output);
     }
 
     public static void println(String output){
-        out.setText(output + "\n");
+        output = out.getText() + output + "\n";
+        out.setText(output);
     }
 
+    public static void println(){
+        out.setText(out.getText() + "\n");
+    }
 }
