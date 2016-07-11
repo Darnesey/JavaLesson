@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import static softwarefactory.javalessons.MainActivity.*;
+
 public class AddStudent extends AppCompatActivity {
 
     @Override
@@ -19,11 +21,15 @@ public class AddStudent extends AppCompatActivity {
     public void onClickSubmit(View v){
         Button view = (Button) v;
         String name = getInput();
-        Start.addStudent(name);
+        try {
+            Start.addStudent(name);
+            setConfirmation(true, "Student added successfully");
+        } catch (Exception e) {
+            setConfirmation(false, "Error adding student");
+        }
 
         //go back to main
-        Intent main = new Intent(this, MainActivity.class);
-        startActivity(main);
+        finish();
     }
 
     public String getInput(){

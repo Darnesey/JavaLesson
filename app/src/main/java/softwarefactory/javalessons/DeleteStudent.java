@@ -15,14 +15,13 @@ public class DeleteStudent extends AppCompatActivity {
         setContentView(R.layout.activity_delete_student);
     }
 
-    public void onClickSubmit(View v){
+    public void onClickDelete(View v){
         Button view = (Button) v;
         String name = getInput();
-        Start.addStudent(name);
+        Start.deleteStudent(name);
 
         //go back to main
-        Intent main = new Intent(this, MainActivity.class);
-        startActivity(main);
+        finish();
     }
 
     public String getInput(){

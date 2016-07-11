@@ -49,10 +49,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Choose an Option"
+        android:text="@string/MainMenu"
         android:id="@+id/menu"
         android:layout_below="@+id/output"
         android:layout_centerHorizontal="true"
         android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmationText"
+        android:layout_below="@+id/button_Print"
+        android:layout_centerHorizontal="true"
+        android:text="test"
+        android:editable="true" />
 
 </RelativeLayout>

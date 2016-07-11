@@ -1,6 +1,7 @@
 package softwarefactory.javalessons;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +12,15 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     public static TextView out;
+    public static TextView confirmation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         out = (TextView) findViewById(R.id.output);
+        confirmation = (TextView) findViewById(R.id.confirmationText);
+        confirmation.setText("testing");
     }
 
 
@@ -45,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(print);
     }
 
+    public static void setConfirmation(boolean success, String message){
+        confirmation.setText(message);
+        if (success)
+            confirmation.setTextColor(Color.GREEN);
+        else
+            confirmation.setTextColor(Color.RED);
+    }
+
     public static void print(String output){
         output = out.getText() + output;
         out.setText(output);
@@ -58,4 +70,5 @@ public class MainActivity extends AppCompatActivity {
     public static void println(){
         out.setText(out.getText() + "\n");
     }
+
 }
