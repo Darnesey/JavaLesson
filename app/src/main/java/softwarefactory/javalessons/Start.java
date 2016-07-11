@@ -11,62 +11,37 @@ import static softwarefactory.javalessons.MainActivity.*;
 
 public class Start {
 
-    public static ArrayList<Student> students = new ArrayList<>();
+    /*
+    Insert array structure here to hold a list of the student objects
+    This is where class variables are placed. They are visible inside any variable within Start
+     */
 
     public static void main(){
         // Insert code inside this method. This method is called when the button is pressed
         /*
-        For this lesson, you will need to create a new Class within the same directory as Start.
-
+        For this lesson, you will need to create a new class, Student, within the same directory as Start.
+        (Directory: softwarefactory.javalessons/)
+        No code will be inserted in this method. You will be using the three methods titled below.
+        These methods will be interacting with the Student class.
          */
-
-
-
-
-
-
-        // your code will stop here
-    }
-
-
-    public static void printMenu(){
-        println("Class List Menu");
-        println("Please Enter an option:" +
-                "\n1) Add a new student" +
-                "\n2) Delete a student" +
-                "\n3) Print the class list");
     }
 
     public static void addStudent(String name){
-        Student student = new Student();
-        student.setName(name);
-        students.add(student);
+        // Create a student object and add it to the list
     }
 
-    public static void deleteStudent(String name){
-        name = name.trim();
-        boolean found = false;
-        for (Student student : students) {
-            if (student.getName().compareTo(name) == 0){
-                found = true;
-                students.remove(student);
-                break;
-            }
-        }
-        if(!found){
-            setConfirmation(false, "Student not found!");
-        } else {
-            setConfirmation(true, "Student deleted successfully");
-        }
+    public static boolean deleteStudent(String name){
+        //Use the found flag for your code. If you successfully found the student to be deleted
+        // set found to be true. Otherwise, set it to false.
+        boolean found = true;
 
+        return found;
     }
 
     public static String printStudents() {
         String list = "";
 
-        for (Student student : students) {
-            list += student.getName() + "\n";
-        }
+        // print off the list of students
 
         return list;
     }

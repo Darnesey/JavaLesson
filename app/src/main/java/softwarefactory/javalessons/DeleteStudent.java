@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import static softwarefactory.javalessons.MainActivity.setConfirmation;
+
 public class DeleteStudent extends AppCompatActivity {
 
     @Override
@@ -18,8 +20,12 @@ public class DeleteStudent extends AppCompatActivity {
     public void onClickDelete(View v){
         Button view = (Button) v;
         String name = getInput();
-        Start.deleteStudent(name);
+        boolean successful = Start.deleteStudent(name);
 
+        if(!successful)
+            setConfirmation(false, "Student not found!");
+        else
+            setConfirmation(true, "Student deleted successfully");
         //go back to main
         finish();
     }

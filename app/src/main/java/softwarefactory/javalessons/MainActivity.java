@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         out = (TextView) findViewById(R.id.output);
         confirmation = (TextView) findViewById(R.id.confirmationText);
-        confirmation.setText("testing");
     }
 
 
