@@ -12,7 +12,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!\n"
         android:id="@+id/output"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true" />
@@ -20,25 +19,40 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Execute!"
-        android:id="@+id/run"
-        android:layout_alignParentBottom="true"
+        android:text="Add a Student"
+        android:id="@+id/button_AddStudent"
+        android:layout_below="@+id/menu"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:nestedScrollingEnabled="false"
-        android:onClick="onClickButton"
-        android:background="@color/colorPrimary" />
+        android:layout_marginTop="65dp"
+        android:onClick="onClickAddStudent" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear Screen"
-        android:id="@+id/button_Clear"
-        android:layout_above="@+id/run"
-        android:layout_alignParentStart="true"
-        android:onClick="onClickClear"
-        android:layout_alignParentEnd="true"
-        android:backgroundTint="@android:color/darker_gray" />
+        android:text="Delete A Student"
+        android:id="@+id/button_DeleteStudent"
+        android:layout_below="@+id/button_AddStudent"
+        android:layout_centerHorizontal="true"
+        android:nestedScrollingEnabled="true"
+        android:onClick="onClickDeleteStudent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Print off Students"
+        android:id="@+id/button_Print"
+        android:layout_below="@+id/button_DeleteStudent"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickPrintStudents" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose an Option"
+        android:id="@+id/menu"
+        android:layout_below="@+id/output"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
 
 </RelativeLayout>

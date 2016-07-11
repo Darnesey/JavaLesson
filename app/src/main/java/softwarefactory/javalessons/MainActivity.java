@@ -1,9 +1,11 @@
 package softwarefactory.javalessons;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,11 +22,27 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickButton(View v) {
         Button button = (Button) v;
+        button.setText("Enter input");
         Start.main();
     }
 
     public void onClickClear(View v) {
         out.setText("");
+    }
+
+    public void onClickAddStudent(View v){
+        Intent add = new Intent(this, AddStudent.class);
+        startActivity(add);
+    }
+
+    public void onClickDeleteStudent(View v) {
+        Intent delete = new Intent(this, DeleteStudent.class);
+        startActivity(delete);
+    }
+
+    public void onClickPrintStudents(View v) {
+        Intent print = new Intent(this, PrintStudent.class);
+        startActivity(print);
     }
 
     public static void print(String output){
