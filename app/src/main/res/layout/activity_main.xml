@@ -61,7 +61,6 @@
         android:id="@+id/confirmationText"
         android:layout_below="@+id/button_Print"
         android:layout_centerHorizontal="true"
-        android:text="test"
         android:editable="true" />
 
 </RelativeLayout>

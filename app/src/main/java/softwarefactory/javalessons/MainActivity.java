@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         out = (TextView) findViewById(R.id.output);
         confirmation = (TextView) findViewById(R.id.confirmationText);
-        confirmation.setText("testing");
+
     }
 
 
     public void onClickButton(View v) {
         Button button = (Button) v;
         button.setText("Enter input");
-        Start.main();
+
     }
 
     public void onClickClear(View v) {
