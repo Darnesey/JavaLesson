@@ -18,27 +18,14 @@ public class Start {
 
             //swap();
     }
-    public static void printArray(int[] num){
-        for(int i = 0; i < num.length; i++){
-            print(num[i]);
 
-        }
-        println();
+    public static void bublleSort(int[] num){}
+
+    public static void printArray(int[] num){
+
     }
 
-    public static void swap(int[] num){
-        int temp=0;
-        for(int i = 0; i< num.length-1;i++){
-
-             temp = num[i];
-            num[i]=num[i+1];
-            num[i+1] = temp;
-
-            printArray(num);
-
-        }
-        println("\nthe swapped array");
-        printArray(num);
+    public static void swap(int[] num) {
     }
 
 }
