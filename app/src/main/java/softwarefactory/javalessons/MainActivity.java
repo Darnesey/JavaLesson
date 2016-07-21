@@ -37,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
         out.setText(output);
     }
 
+    public static void print(int output){
+        String print;
+        print = out.getText() + String.valueOf(output);
+        out.setText(print);
+    }
+
+
+    public static void println(int output){
+        String print;
+        print = out.getText() + String.valueOf(output) + "\n";
+        out.setText(output);
+    }
+
     public static void println(){
         out.setText(out.getText() + "\n");
     }
