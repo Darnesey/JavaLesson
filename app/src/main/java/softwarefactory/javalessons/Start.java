@@ -34,7 +34,6 @@ public  class Start {
             print(num[i] + " ");
         }
     }
-
     public static void swap(int[] num, int idex1, int idex2) {
         int temp = num[idex1];
         num[idex1] = num[idex2];
@@ -42,6 +41,10 @@ public  class Start {
 
 
     }
+
+    /*
+     Start here to grab all methods used for the merge sort algorithm
+     */
     private static Integer[] getleft(Integer[] num){
         Integer[]left=new Integer[num.length/2];
         for (int i = 0; i < left.length; i++) {
@@ -63,10 +66,11 @@ public  class Start {
             right = new Integer[num.length / 2];
         }
         for (int i = 0; i < right.length; i++) {
-            right[i]=num[i+right.length/2];
+            right[i]=num[i + (num.length/2)];
         }
         return right;
     }
+
     public static Integer[] mergeSort(Integer[] num){
     if ( num.length == 1 )
         return num;
@@ -94,6 +98,10 @@ public  class Start {
         }
         return list.toArray(new Integer[list.size()]);
     }
+    /*
+        The end of the merge sort methods
+     */
+
 
     public  void selectionNumber(int[] num){
         int min;
